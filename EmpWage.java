@@ -14,13 +14,17 @@ public class EmpWage{
 		int partTime=0;
 		int fullTime=0;
 		int absent=0;
+		int maxHr=100;
+		int totalDays=0;
+		int totalEmpHr=0;
 
 		System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM!");
 
 		//UC1: Employee check for attendance
 
-		for(int counter=1; counter<=noWorkingDays; counter++){
+		while( totalEmpHr<maxHr && totalDays<noWorkingDays ){
 
+			totalDays+=1;
 			Random ran=new Random();
         	        int ran1=ran.nextInt(3)+1;
                 	//System.out.println("Number is : "+ran1);
@@ -40,6 +44,7 @@ public class EmpWage{
                         		partTime+=1;
 					empHr=4;
 			}
+		totalEmpHr+=empHr;
 		dailyWage=empRatePerHr*empHr;
 		totalSalary=dailyWage+totalSalary;
 
@@ -47,6 +52,7 @@ public class EmpWage{
 
 		System.out.println("EMPLOYEE DATA :");
 		System.out.println("FullTime Present Days : "+fullTime+" Part Time Present Days : "+partTime+" Absent Days : "+absent);
+		System.out.println("Total Working Days : "+totalDays+" Total Working Hours : "+totalEmpHr);
 		System.out.println("Total Salary for a Month is "+totalSalary);
 	}
 
