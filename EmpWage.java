@@ -4,6 +4,12 @@ import java.io.*;
 public class EmpWage{
 
 	public static void main(String args[]){
+
+		//Variable declaration
+		int empRatePerHr=20;
+		int empHr=8;
+		int dailyWage;
+
 		System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM!");
 
 		//UC1: Employee check for attendance
@@ -15,6 +21,8 @@ public class EmpWage{
 		}
 		else{
 			System.out.println("Employee is Present");
+			dailyWage=empRatePerHr*empHr;
+			System.out.println("Daily Employee Wage is "+dailyWage);
 		}
 
 	}
