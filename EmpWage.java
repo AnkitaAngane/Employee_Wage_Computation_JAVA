@@ -16,20 +16,21 @@ public class EmpWage{
 		Random ran=new Random();
                 int ran1=ran.nextInt(3)+1;
                 //System.out.println("Number is : "+ran1);
-		if(ran1==3){
-			System.out.println("Employee is absent");
-		}
-		else if(ran1==1){
-			System.out.println("Employee is Present for full time");
-			empHr=8;
-			dailyWage=empRatePerHr*empHr;
-			System.out.println("Daily Employee Wage is "+dailyWage);
-		}
-		else{
-			System.out.println("Employee is Present for part time");
-                        empHr=4;
-                        dailyWage=empRatePerHr*empHr;
-                        System.out.println("Daily Employee Wage is "+dailyWage);
+		switch(ran1){
+			case 3 :
+				System.out.println("Employee is absent");
+				break;
+			case 1 :
+				System.out.println("Employee is Present for full time");
+				empHr=8;
+				dailyWage=empRatePerHr*empHr;
+				System.out.println("Daily Employee Wage is "+dailyWage);
+				break;
+			default :
+				System.out.println("Employee is Present for part time");
+                        	empHr=4;
+                        	dailyWage=empRatePerHr*empHr;
+                        	System.out.println("Daily Employee Wage is "+dailyWage);
 		}
 
 	}
