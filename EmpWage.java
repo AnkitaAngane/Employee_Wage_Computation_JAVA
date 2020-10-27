@@ -7,7 +7,7 @@ public class EmpWage{
 
 		//Variable declaration
 		int empRatePerHr=20;
-		int empHr=8;
+		int empHr;
 		int dailyWage;
 
 		System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION PROGRAM!");
@@ -19,10 +19,17 @@ public class EmpWage{
 		if(ran1==3){
 			System.out.println("Employee is absent");
 		}
-		else{
-			System.out.println("Employee is Present");
+		else if(ran1==1){
+			System.out.println("Employee is Present for full time");
+			empHr=8;
 			dailyWage=empRatePerHr*empHr;
 			System.out.println("Daily Employee Wage is "+dailyWage);
+		}
+		else{
+			System.out.println("Employee is Present for part time");
+                        empHr=4;
+                        dailyWage=empRatePerHr*empHr;
+                        System.out.println("Daily Employee Wage is "+dailyWage);
 		}
 
 	}
