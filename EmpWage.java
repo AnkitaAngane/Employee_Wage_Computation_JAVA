@@ -3,9 +3,9 @@ import java.io.*;
 
 public class EmpWage{
 
-	public static void main(String args[]){
+	public void WorkingHr(){
 
-		//Variable declaration
+	//Variable declaration
 		int empRatePerHr=20;
 		int empHr;
 		int dailyWage;
@@ -54,6 +54,14 @@ public class EmpWage{
 		System.out.println("FullTime Present Days : "+fullTime+" Part Time Present Days : "+partTime+" Absent Days : "+absent);
 		System.out.println("Total Working Days : "+totalDays+" Total Working Hours : "+totalEmpHr);
 		System.out.println("Total Salary for a Month is "+totalSalary);
+
+	}
+
+	public static void main(String args[]){
+
+	EmpWage obj = new EmpWage();
+	obj.WorkingHr();
+
 	}
 
 }
