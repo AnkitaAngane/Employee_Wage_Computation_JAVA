@@ -10,14 +10,6 @@ public void EmpWageBuilder();
 
 public class EmpWage implements EmpWageCal{
 
-/*	public void set(int Wage,int WorkingDay,int Hour){
-
-		empRatePerHr=Wage;
-		maxHr=Hour;
-		noWorkingDays=WorkingDay;
-
-	}
-*/
 	public void EmpWageBuilder(){
 
 		int empRatePerHr;
@@ -94,7 +86,8 @@ public class EmpWage implements EmpWageCal{
 
 	public static void main(String args[]){
 
-	EmpWage[] obj = new EmpWage[3];
+//Using array of objects
+/*	EmpWage[] obj = new EmpWage[3];
 
 	obj[0]=new EmpWage();
 	obj[1]=new EmpWage();
@@ -103,19 +96,19 @@ public class EmpWage implements EmpWageCal{
 	obj[0].EmpWageBuilder();
 	obj[1].EmpWageBuilder();
 	obj[2].EmpWageBuilder();
-
-/*	EmpWage company1 = new EmpWage();
-//	company1.set(20,20,100);
-	company1.EmpWageBuilder();
-
-	EmpWage company2 = new EmpWage();
-//	company2.set(30,15,70);
-	company2.EmpWageBuilder();
-
-	EmpWage company3 = new EmpWage();
-//	company3.set(15,25,90);
-	company3.EmpWageBuilder();
 */
+
+//Using array list o objects
+
+	ArrayList<EmpWage> company = new ArrayList<EmpWage>();
+    	company.add(new EmpWage());
+    	company.add(new EmpWage());
+    	company.add(new EmpWage());
+
+	for (EmpWage c: company){
+		c.EmpWageBuilder();
 	}
+
+}
 
 }
