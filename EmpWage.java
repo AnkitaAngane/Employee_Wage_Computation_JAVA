@@ -3,18 +3,27 @@ import java.io.*;
 
 public class EmpWage{
 
-	public static void WorkingHr(int Wage, int WorkingDay, int Hour){
+	public int empRatePerHr;
+	public int noWorkingDays;
+	public int maxHr;
+
+	public void set(int Wage,int WorkingDay,int Hour){
+
+		empRatePerHr=Wage;
+		maxHr=Hour;
+		noWorkingDays=WorkingDay;
+
+	}
+
+	public void EmpWageBuilder(){
 
 	//Variable declaration
-		int empRatePerHr=Wage;
 		int empHr;
 		int dailyWage;
-		int noWorkingDays=WorkingDay;
 		int totalSalary=0;
 		int partTime=0;
 		int fullTime=0;
 		int absent=0;
-		int maxHr=Hour;
 		int totalDays=0;
 		int totalEmpHr=0;
 
@@ -61,10 +70,18 @@ public class EmpWage{
 
 	public static void main(String args[]){
 
-	//EmpWage company1 = new EmpWage();
-	WorkingHr(20,20,100);
-	WorkingHr(30,15,70);
-	WorkingHr(15,25,90);
+	EmpWage company1 = new EmpWage();
+	company1.set(20,20,100);
+	company1.EmpWageBuilder();
+
+	EmpWage company2 = new EmpWage();
+	company2.set(30,15,70);
+	company2.EmpWageBuilder();
+
+	EmpWage company3 = new EmpWage();
+	company3.set(15,25,90);
+	company3.EmpWageBuilder();
+
 	}
 
 }
