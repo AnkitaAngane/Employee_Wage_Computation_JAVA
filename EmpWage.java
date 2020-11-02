@@ -1,7 +1,14 @@
 import java.util.*;
 import java.io.*;
 
-public class EmpWage{
+interface EmpWageCal{
+
+public void EmpWageBuilder();
+
+}
+
+
+public class EmpWage implements EmpWageCal{
 
 /*	public void set(int Wage,int WorkingDay,int Hour){
 
@@ -45,7 +52,7 @@ public class EmpWage{
 		int totalEmpHr=0;
 
 		System.out.println("COMPANY DATA");
-		System.out.println("Employee Wage per hour "+empRatePerHr+" Maximum Working Days "+maxHr+" Maximum Working Hours "+maxHr);
+		System.out.println("Employee Wage per hour : "+empRatePerHr+" Maximum Working Days : "+maxHr+" Maximum Working Hours : "+maxHr);
 		System.out.println("");
 		//UC1: Employee check for attendance
 
