@@ -10,11 +10,21 @@ public void EmpWageBuilder();
 
 public class EmpWage implements EmpWageCal{
 
-	public void EmpWageBuilder(){
+	//Variable declaration
+		int empHr;
+		int dailyWage;
+		int totalSalary=0;
+		int partTime=0;
+		int fullTime=0;
+		int absent=0;
+		int totalDays=0;
+		int totalEmpHr=0;
 
 		int empRatePerHr;
 		int noWorkingDays;
 		int maxHr;
+
+	public void EmpWageBuilder(){
 
 		Scanner in = new Scanner(System.in);
 
@@ -32,16 +42,6 @@ public class EmpWage implements EmpWageCal{
 		maxHr=in.nextInt();
 
 		System.out.println("");
-
-		//Variable declaration
-		int empHr;
-		int dailyWage;
-		int totalSalary=0;
-		int partTime=0;
-		int fullTime=0;
-		int absent=0;
-		int totalDays=0;
-		int totalEmpHr=0;
 
 		System.out.println("COMPANY DATA");
 		System.out.println("Employee Wage per hour : "+empRatePerHr+" Maximum Working Days : "+maxHr+" Maximum Working Hours : "+maxHr);
@@ -84,6 +84,10 @@ public class EmpWage implements EmpWageCal{
 		System.out.println("");
 	}
 
+	public int getTotalWage(){
+		return totalSalary;
+	}
+
 	public static void main(String args[]){
 
 //Using array of objects
@@ -105,9 +109,20 @@ public class EmpWage implements EmpWageCal{
     	company.add(new EmpWage());
     	company.add(new EmpWage());
 
-	for (EmpWage c: company){
+/*	for (EmpWage c: company){
 		c.EmpWageBuilder();
 	}
+*/
+	Scanner sc=new Scanner(System.in);
+
+	for (EmpWage c: company){
+		c.EmpWageBuilder();
+		System.out.println("Wish to know total Wage. If yes then type yes else no");
+		String str=sc.nextLine();
+		if (str.equals("yes")){
+	                System.out.println(c.getTotalWage());
+		}
+        }
 
 }
 
