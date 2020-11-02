@@ -89,7 +89,6 @@ public class EmpWage implements EmpWageCal{
 			k+=1;
 		}
 		System.out.println("Total Salary for a Month is "+totalSalary);
-		System.out.println("------------------------------------------------------------------------");
 		System.out.println("");
 	}
 
@@ -129,8 +128,10 @@ public class EmpWage implements EmpWageCal{
 		System.out.println("Wish to know total Wage. If yes then type yes else no");
 		String str=sc.nextLine();
 		if (str.equals("yes")){
-	                System.out.println(c.getTotalWage());
+	                System.out.println("Total Wage : "+c.getTotalWage());
 		}
+		System.out.println("------------------------------------------------------------------------");
+		System.out.println("");
         }
 
 }
