@@ -42,6 +42,9 @@ public class EmpWage implements EmpWageCal{
 		int absent=0;
 		int totalDays=0;
 		int totalEmpHr=0;
+		int k=1;
+
+		List DWage = new ArrayList();
 
 		System.out.println("COMPANY DATA");
 		System.out.println("Employee Wage per hour : "+empRatePerHr+" Maximum Working Days : "+maxHr+" Maximum Working Hours : "+maxHr);
@@ -72,6 +75,7 @@ public class EmpWage implements EmpWageCal{
 			}
 		totalEmpHr+=empHr;
 		dailyWage=empRatePerHr*empHr;
+		DWage.add(dailyWage);
 		totalSalary=dailyWage+totalSalary;
 
 		}
@@ -79,6 +83,11 @@ public class EmpWage implements EmpWageCal{
 		System.out.println("EMPLOYEE DATA :");
 		System.out.println("FullTime Present Days : "+fullTime+" Part Time Present Days : "+partTime+" Absent Days : "+absent);
 		System.out.println("Total Working Days : "+totalDays+" Total Working Hours : "+totalEmpHr);
+		System.out.println("Daily Wages are : "+DWage);
+		for (int count=0;count<DWage.size();count++){
+			System.out.println("Day"+k+" Wage "+DWage.get(count));
+			k+=1;
+		}
 		System.out.println("Total Salary for a Month is "+totalSalary);
 		System.out.println("------------------------------------------------------------------------");
 		System.out.println("");
